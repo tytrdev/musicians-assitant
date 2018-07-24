@@ -1,0 +1,129 @@
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.app-body {
+  position: relative;
+  margin-top: 50px; }
+
+.flex {
+  width: 100%;
+  height: 100%;
+  display: flex; }
+  .flex.columns {
+    flex-direction: column; }
+  .flex.wrap {
+    flex-wrap: wrap; }
+  .flex.between {
+    justify-content: space-between; }
+  .flex .center {
+    align-self: center; }
+
+.link {
+  text-decoration: none;
+  color: white; }
+
+.active-link {
+  text-decoration: none;
+  color: white; }
+
+.form {
+  align-self: center; }
+
+/* Notifications */
+.dark-toast {
+  background-color: #312F2F;
+  color: #8bffd1; }
+
+.app-bar {
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: #312F2F;
+  border-bottom: 1px solid #FFFFFF; }
+  .app-bar a {
+    color: #8bffd1;
+    transition: color 0.5s ease; }
+  .app-bar a:hover {
+    color: #AEBBFF; }
+  .app-bar .logo-link {
+    margin-left: 15px;
+    font-size: 2em;
+    align-self: center; }
+  .app-bar .brand-link {
+    margin-left: 15px;
+    font-size: 2em;
+    color: #FFFFFF;
+    text-decoration: none;
+    align-self: center; }
+  .app-bar .active-user-image {
+    height: 50px;
+    width: auto; }
+  .app-bar .app-actions {
+    margin-left: auto;
+    margin-right: 10px;
+    align-self: center; }
+    .app-bar .app-actions .login-icon {
+      margin-right: 5px; }
+    .app-bar .app-actions .login-button {
+      cursor: pointer;
+      width: 150px;
+      padding: 10px;
+      background-color: #312F2F;
+      color: #8bffd1;
+      border: 1px solid #FFFFFF; }
+    .app-bar .app-actions .logout-button {
+      cursor: pointer;
+      width: 150px;
+      padding: 10px;
+      background-color: #312F2F;
+      color: #8bffd1;
+      border: 1px solid #FFFFFF;
+      margin-left: 10px !important; }
+    .app-bar .app-actions .login-button:hover, .app-bar .app-actions .logout-button:hover {
+      color: #FFFFFF;
+      background-color: #6457A6; }
+    .app-bar .app-actions .active-user {
+      color: #8bffd1; }
+
+.Footer {
+  background-color: #312F2F;
+  border-top: 1px solid #FFFFFF;
+  flex-shrink: 1; }
+  .Footer .copyright {
+    color: #8bffd1; }
+
+.welcome {
+  position: relative;
+  background-color: #312F2F; }
+  .welcome .welcome-banner {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    z-index: 1; }
+    .welcome .welcome-banner .header {
+      color: #FFFFFF;
+      font-size: 2em; }
+    .welcome .welcome-banner .create-now {
+      align-self: center;
+      padding: 10px;
+      font-size: 1.2em;
+      background-color: #312F2F;
+      color: #8bffd1;
+      border: none;
+      cursor: pointer;
+      transition: all 0.5s linear; }
+    .welcome .welcome-banner .create-now:hover {
+      color: #FFFFFF;
+      background-color: #6457A6; }
+
+.negative-harmony-selections {
+  flex-basis: 100px; }
