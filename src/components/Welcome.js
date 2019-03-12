@@ -8,11 +8,9 @@ const Welcome = () => (
         Welcome to Musicians Assitant!
       </span>
 
-      <button className="create-now">
-        <Link to="/theory">
-          Check out the theory listings
-        </Link>
-      </button>
+      <Link className="create-now" to="/tools">
+        Check out the available tools
+      </Link>
     </div>
   </div>
 );

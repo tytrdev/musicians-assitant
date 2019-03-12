@@ -7,7 +7,7 @@ import {
 import Header from './Header';
 import Footer from './Footer';
 import Welcome from './Welcome';
-import Theory from './theory/Home';
+import Tools from './tools/Home';
 
 const App = () => (
   <Router>
@@ -25,7 +25,7 @@ const App = () => (
         {/* Landing page for all users */}
         <Route exact path="/" component={Welcome} />
         <Route exact path="/welcome" component={Welcome} />
-        <Route path="/theory" component={Theory} />
+        <Route path="/tools" component={Tools} />
       </div>
 
       <Footer></Footer>
