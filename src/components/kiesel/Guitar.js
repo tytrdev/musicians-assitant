@@ -24,13 +24,13 @@ class Guitars extends Component {
       guitars,
     });
   }
-  
-  eventMethod() {
-
-  }
 
   getGuitarContent(guitar) {
-    return <p>Guitar</p>;
+    return (
+      <div className="kiesel-bass">
+        <img src={guitar.imageUrl} />
+      </div>
+    )
   }
 
   render() {
@@ -40,7 +40,9 @@ class Guitars extends Component {
       <div className="flex columns">
         <h3>Kiesel Guitar Listings</h3>
 
-      { guitars }
+        <div className="flex kiesel-basses">
+          { guitars }
+        </div>
       </div>
     );
   }

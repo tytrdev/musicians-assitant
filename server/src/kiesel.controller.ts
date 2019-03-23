@@ -7,7 +7,12 @@ export class KieselController {
   constructor(private readonly kieselService: KieselService) {}
 
   @Get('/basses')
-  getBasses(): [KieselEntry] {
+  getBasses() {
     return this.kieselService.getBasses();
+  }
+
+  @Get('/guitars')
+  getGuitars() {
+    return this.kieselService.getGuitars();
   }
 }

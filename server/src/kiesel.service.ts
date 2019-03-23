@@ -4,13 +4,19 @@ import KieselEntry from './schema/KieselEntry';
 
 @Injectable()
 export class KieselService {
-  scraper: Scraper;
+  bassScraper: Scraper;
+  guitarScraper: Scraper;
 
   constructor() {
-    this.scraper = new Scraper('https://www.kieselguitars.com/guitarsinstock/bass-guitars');
+    this.bassScraper = new Scraper('https://www.kieselguitars.com/guitarsinstock/bass-guitars');
+    this.guitarScraper = new Scraper('https://www.kieselguitars.com/guitarsinstock/electric-guitars');
   }
 
-  getBasses(): [KieselEntry] {
-    return this.scraper.scrape();
+  getBasses() {
+    return this.bassScraper.scrape();
+  }
+
+  getGuitars() {
+    return this.guitarScraper.scrape();
   }
 }

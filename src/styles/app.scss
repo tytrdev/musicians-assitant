@@ -4,3 +4,16 @@
 
 // Import component-specific scss
 @import './components/_components';
+
+.kiesel-basses {
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+.kiesel-bass {
+    margin: 15px;
+
+    img {
+
+    }
+}

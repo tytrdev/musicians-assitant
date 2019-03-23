@@ -127,3 +127,10 @@ a {
 
 .negative-harmony-selections {
   flex-basis: 100px; }
+
+.kiesel-basses {
+  flex-wrap: wrap;
+  overflow-y: scroll; }
+
+.kiesel-bass {
+  margin: 15px; }

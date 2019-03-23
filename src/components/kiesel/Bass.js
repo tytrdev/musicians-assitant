@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import Kiesel from '../../services/Kiesel';
+import { Link } from 'react-router-dom';
 
 class Basses extends Component {
   constructor(props) {
@@ -18,19 +19,23 @@ class Basses extends Component {
   async getBasses() {
     const basses = await Kiesel.basses();
 
-    console.log(basses);
-
     this.setState({
       basses,
     });
   }
-  
-  eventMethod() {
-
-  }
 
   getBassContent(bass) {
-    return <p>Bass</p>;
+    console.log(bass.serialNumber);
+    const serialNumber = bass.serialNumber.replace(/S\/N:/g, '').trim();
+    const listingUrl = `/kiesel/bass/${serialNumber}`;
+
+    return (
+      <Link className="create-now" to={listingUrl}>
+        <div className="kiesel-bass">
+          <img src={bass.imageUrl} />
+        </div>
+      </Link>
+    )
   }
 
   render() {
@@ -40,7 +45,9 @@ class Basses extends Component {
       <div className="flex columns">
         <h3>Kiesel Bass Listings</h3>
 
-        { basses }
+        <div className="flex kiesel-basses">
+          { basses }
+        </div>
       </div>
     );
   }
